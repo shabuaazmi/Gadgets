@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            div{
+                border: 1px solid black;
+                width: 400px;
+                margin: auto;
+                padding:10px;
+                margin-bottom: auto;
+                border-radius: 15px; 
+                margin-top: 100px;
+            }
+            input{
+                margin: auto;
+                margin-left: 10px;
+            }
+            .input{
+                margin-left: 170px;
+            }
+            a{
+                margin-left: 140px;
+            }
+            label{
+                margin-left: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <center>
+                <h1>Gadget Store</h1>
+                <h3>Login Accound</h3>
+            </center>
+            <form action="/login1/" method="post">
+                {% csrf_token %}
+                <label>Username</label><input type="text" placeholder="Username" name="username"><br><br>
+                <label>Password</label><input type="password" name="password" placeholder="pswrd"><br><br>
+                <input type="submit" value="Login" class="input"><br><br>
+               
+            </form>
+            <a href="/createac/">Create Accound</a>
+        </div>
+    </body>
+</html>

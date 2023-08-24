@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>User Details</title>
+        <style>
+            table,th,tr,td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Gadget Store</h1><br>
+            <h2>User Details</h2><br><br>
+            <table>
+                <thead>
+                    <th> .. </th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Place</th>
+                    <th>Address</th>
+                    <th>##</th>
+                </thead>
+                <tbody>
+                    {% for x in data %}
+                    <tr>
+                        <td><img src="{{ x.photo }}" alt="user dp"></td>
+                        <td>{{ x.username }}</td>
+                        <td>{{ x.name }}</td>
+                        <td>{{ x.gender }}</td>
+                        <td>{{ x.phone }}</td>
+                        <td>{{ x.email }}</td>
+                        <td>{{ x.place }}</td>
+                        <td>{{ x.address }}</td>
+                        <td><a href="/dltuser/{{x.id}}">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </center>
+        <a href="/back_admin/">Back</a>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Profile</title>
+        <style>
+            table{
+                border: 1px solid black;
+                margin: auto;
+            }
+            td{
+                font-size: 20px;
+
+            }
+           
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Gadget Store</h1>
+            <h3>Profile Details</h3>
+        </center>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Username</td>
+                    <td>{{y.username}}</td>
+                    <td rowspan="7"><img src="{{y.photo}}" alt="userprofile" width="100px" height="100px"></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>{{y.name}}</td>
+                </tr>
+                <tr>
+                    <td>Place</td>
+                    <td>{{y.place}}</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>{{y.gender}}</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>{{y.phone}}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{y.email}}</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>{{y.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+       <center>
+            <a href="/updateprofile/{{y.id}}">Upadate</a> &nbsp;
+            <a href="/back_user/">Back</a>
+       </center>
+    </body>
+</html>
+

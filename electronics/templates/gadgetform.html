@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Gadget Form</title>
+        <style>
+            div{
+                border: 1px solid black;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                margin-top:50px ;
+                border-radius: 5px;
+            }
+            label{
+                margin-left: 80px;
+            }
+            .input{
+                margin-left: 170px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <center><h1>Add Product</h1></center>
+            <form action="/gadgetsform1/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label>Product Name</label><input type="text" name="pname"><br><br>
+                <label>Price</label><input type="text" name="price"><br><br>
+                <label>Warranty</label><input type="number" name="warranty"><br><br>
+                <label>Category</label><input type="text" name="category"><br><br>
+                <label>Image</label><input type="file" name="photo"><br><br>
+                <input type="submit" value="Add" class="input">
+            </form>
+            <a href="/back_admin/">Back</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Update Gadget Form</title>
+        <style>
+            div{
+                border: 1px solid black;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                margin-top:50px ;
+                border-radius: 5px;
+            }
+            label{
+                margin-left: 80px;
+            }
+            .input{
+                margin-left: 170px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <center><h1>Update Product</h1></center>
+            <form action="/updategadget1/{{x.id}}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label>Product Name</label><input type="text" name="pname" value="{{ x.g_name }}"><br><br>
+                <label>Price</label><input type="text" name="price" value="{{ x.g_price }}"><br><br>
+                <label>Warranty</label><input type="number" name="warranty" value="{{ x.g_warranty }}"><br><br>
+                <label>Category</label><input type="text" name="category" value="{{ x.category }}"><br><br>
+                <label>Image</label><input type="file" name="photo" value="{{ x.photo }}"><br><br>
+                <input type="submit" value="Add" class="input">
+            </form>
+            <a href="/back_admin/">Back</a>
+        </div>
+    </body>
+</html>
